@@ -1,0 +1,83 @@
+{% extends "layout-admin.html.twig" %}
+
+    {% block title %}
+
+        IceWorld | Connexion
+
+    {% endblock %}
+
+
+
+{% block content %}
+
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-t-85 p-b-20">
+
+
+                <form class="login100-form validate-form" method="post" action="">
+
+					<span class="login100-form-title p-b-70">
+						Bienvenue
+					</span>
+
+                    <span class="login100-form-avatar">
+						<img src="{{ asset ('admin/images/avatar-01.jpg') }}" alt="AVATAR">
+					</span>
+
+                    <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Veuillez renseigner un identifiant">
+                        <input class="input100" type="text" name="username">
+                        <span class="focus-input100" data-placeholder="Identifiant"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-50" data-validate="Veuillez renseigner un mot de passe">
+                        <input class="input100" type="password" name="password">
+                        <span class="focus-input100" data-placeholder="Mot de passe"></span>
+                    </div>
+
+                     <div class="container-login100-form-btn">
+
+                             <button type="submit" class="login100-form-btn">
+                                 Accéder à votre console
+                        </button>
+
+
+                    </div>
+
+
+                    <ul class="login-more p-t-190">
+                        <li class="m-b-8">
+
+
+                            <a href="#" class="txt2">
+                                Identifiant / Mot de passe ?
+                            </a>
+
+                            <span class="txt1">
+								Oublié
+							</span>
+                        </li>
+
+                        <li>
+							<span class="txt1">
+								Nouveau administrateur ?
+							</span>
+
+                            <a href="#" class="txt2">
+                                Enregistrez-vous
+                            </a>
+                        </li>
+                    </ul>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="dropDownSelect1"></div>
+
+
+{% endblock %}

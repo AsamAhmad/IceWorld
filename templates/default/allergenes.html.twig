@@ -1,0 +1,144 @@
+{% extends "layout.html.twig" %}
+
+
+{% block title %}
+
+    IceWorld | Allergènes
+
+{% endblock %}
+
+
+{% block content %}
+
+
+    <div class="container allergene">
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Les Allergènes</h1>
+                <h3 class="section-subheading text-muted allergenetolerence">Vous souffrez d'une intolérance ou d'une
+                    allergie alimentaire ?</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center p-5">
+
+
+                <ul class="list-inline social-buttons">
+
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <img src="{{ asset ('img/icon-svg/egg.png') }}" alt="">
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <img src="{{ asset ('img/icon-svg/nut.png') }}" alt="">
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <img src="{{ asset ('img/icon-svg/gluten.png') }}" alt="">
+                        </a>
+                    </li>
+
+
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <img src="{{ asset ('img/icon-svg/cow-silhouette.png') }}" alt="">
+                        </a>
+                    </li>
+
+
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <img src="{{ asset ('img/icon-svg/lotus-flower.png') }}" alt="">
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+
+            <table class="table table-hover table-stripped">
+
+                <thead class="thead-dark">
+                <tr>
+                    <th class="text-left">Les Glaces</th>
+                    <th class="text-center">Gluten</th>
+                    <th class="text-center">Oeuf</th>
+                    <th class="text-center">Fruit à coque</th>
+                    <th class="text-center">Lait</th>
+                    <th class="text-center">Soja</th>
+                </tr>
+                </thead>
+
+
+                <tbody class="table-stripped2">
+                <tr>
+                    <th>Cornet</th>
+                    <td class="text-center">X</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Macaron mangue</th>
+                    <td></td>
+                    <td class="text-center">X</td>
+                    <td class="text-center">X</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th >Macaron vanille</th>
+                    <td></td>
+                    <td class="text-center">X</td>
+                    <td class="text-center">X</td>
+                    <td class="text-center">X</td>
+                    <td class="text-center">X</td>
+                </tr>
+
+                <tr>
+                    <th>Macaron vanille</th>
+                    <td></td>
+                    <td class="text-center">X</td>
+                    <td class="text-center">X</td>
+                    <td class="text-center">X</td>
+                    <td class="text-center">X</td>
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+    <div class="col-md-8 mx-auto text-center bas ">
+        <p>
+            * Autres allergènes : Anhydride sulfureux et sulfites en concentration de plus de 10mg/kg ou
+            10 mg/l (exprimés en SO2); Arachides et produits à base d’arachides; Céleri et produits à
+            base de céleri; Céréales contenant du gluten (blé, seigle, orge, avoine, épeautre, kamut)
+            et produits à base de ces céréales; Crustacés et produits à base de crustacés ; Graines
+            de sésame et produits à base de graines de sésame; Lupin et produits à base de lupin;
+            Mollusques et produits à base de mollusques; Moutarde et produits à base de moutarde;
+            Poissons et produits à base de poissons.
+        </p>
+
+        <p>** existe en version sans gluten </p>
+        <p>*** produits neutres sans glace ni topping</p>
+    </div>
+
+
+
+
+
+{% endblock %}

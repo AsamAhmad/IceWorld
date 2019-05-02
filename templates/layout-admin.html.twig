@@ -1,0 +1,75 @@
+{% extends "base.html.twig" %}
+
+    {% block stylesheets %}
+
+
+        <!----------------------------- LES SCRIPTS --------------------------------------------->
+
+
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="{{ asset ('img/icon-svg/favicon2.png') }}"/>
+
+        <!-- Bootstrap core CSS + Favicon -->
+
+        <link rel="stylesheet" type="text/css" href="{{ asset ('admin/vendor/bootstrap/css/bootstrap.min.css') }}">
+
+        <!-- Custom fontawsome -->
+        <link rel="stylesheet" type="text/css" href="{{ asset ('admin/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('admin/fonts/iconic/css/material-design-iconic-font.min.cs') }}s">
+
+        <!-- Hamburger -->
+        <link rel="stylesheet" type="text/css" href="{{ asset ('admin/vendor/animate/animate.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('admin/vendor/css-hamburgers/hamburgers.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('admin/vendor/animsition/css/animsition.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('admin/vendor/select2/select2.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('admin/vendor/daterangepicker/daterangepicker.css') }}">
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+
+        <!-- Animate -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
+
+        <!-- Nos Scripts -->
+        <link rel="stylesheet" type="text/css" href="{{ asset ('css/agency.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('admin/css/util.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('admin/css/main.css') }}">
+
+
+    {% endblock %}
+
+
+
+
+    {% block body %}
+
+        {% include 'administrateur/_navbar.html.twig' %}
+
+        {% block content '' %}
+
+        {% include 'components/_footer.html.twig' %}
+
+    {% endblock %}
+
+
+
+    {% block javascripts %}
+
+
+        <!-- Bootstrap core JavaScript -->
+        <!-- Plugin JavaScript -->
+        <script src="{{ asset ('admin/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+        <script src="{{ asset ('admin/vendor/animsition/js/animsition.min.js') }}"></script>
+        <script src="{{ asset ('admin/vendor/bootstrap/js/popper.js') }}"></script>
+        <script src="{{ asset ('admin/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset ('admin/vendor/select2/select2.min.js') }}"></script>
+        <script src="{{ asset ('admin/vendor/daterangepicker/moment.min.js') }}"></script>
+        <script src="{{ asset ('admin/vendor/daterangepicker/daterangepicker.js') }}"></script>
+        <script src="{{ asset ('admin/vendor/countdowntime/countdowntime.js') }}"></script>
+
+        <!-- Custom scripts for this template -->
+        <script src="{{ asset ('admin/js/main.js') }}"></script>
+
+
+    {% endblock %}

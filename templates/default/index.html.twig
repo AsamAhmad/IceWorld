@@ -1,0 +1,250 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}
+
+    IceWorld | Accueil
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+    <!-- Header Top -->
+    <header class="masthead">
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Venez découvrir les glaces les plus chères du monde !</div>
+                <div class="intro-heading text-uppercase">ICE WORLD</div>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ path ('parfums_home') }}">Découvrez nos parfums</a>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <!-- Services -->
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase"> L'EQUIPE IceWorld </h2>
+                    <h3 class="section-subheading text-muted">Le voyage ne fait que commencer...</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <a href="{{ path ('parfums_home') }}" class="serviceplan">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+             <i class="fas fa-ice-cream fa-stack-1x fa-inverse"></i>
+          </span>
+                        <h4 class="service-heading">Parfums</h4></a>
+                    <p class="text-muted">Et si vous faisiez de votre glace un voyage ? Nos parfums sont minutieusement choisis afin de vous faire naviguer entre les continents et ce à travers des ingrédients les plus luxueux qui existent.
+                    </p>
+                </div>
+
+                <div class="col-md-4"><a href="{{ path ('boutiques') }}" class="serviceplan">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-store-alt fa-stack-1x fa-inverse"></i>
+          </span>
+                        <h4 class="service-heading">Boutiques</h4></a>
+                    <p class="text-muted">Retrouvez nos glaces dans 10 boutiques à travers le monde, vous proposant l’ensemble de nos luxueux et délicieux parfums</p>
+                </div>
+                <div class="col-md-4">
+                    <a href="{{ path ('ateliers') }}" class="serviceplan">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-user-friends fa-stack-1x fa-inverse"></i>
+          </span>
+                        <h4 class="service-heading">Nos Ateliers</h4></a>
+                    <p class="text-muted">Venez vous initier aux arts glaciers en venant à notre rencontre lors de différents ateliers sur les thèmes des différentes saveurs du monde.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Image de séparation  en paralax -->
+
+    <div id="separate" class="intro route bg-image">
+        <div class="overlay-itro"></div>
+        <div class="intro-content display-table">
+            <div class="table-cell">
+                <div class="container col-md-12 zindexcontainer text-center">
+
+                    <!--
+
+                    <div><img class="zindex animated fadeInDownBig delay-1s" src="img/portfolio/001-max.png" alt=""></div>
+                    <div><img class="zindex animated fadeInDownBig delay-2s " src="img/portfolio/001-max.png" alt=""></div>
+                    <div><img class="zindex animated fadeInDownBig delay-3s " src="img/portfolio/001-max.png" alt=""></div>
+
+                    -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- L'Histoire -->
+
+
+    <section id="about">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">L'Histoire de Ice World</h2>
+                    <h3 class="section-subheading text-muted">______</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+
+
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="{{ asset ('img/SOURCE/rounded1.png') }}" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2009-2015</h4>
+                                    <h4 class="subheading">Au commencement ...</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        Tout débute dans un petit village d’Auvergne, qui se doutait donc qu’à Brioude, un enfant gourmand et rêveur aurait eu l’ambition de vous faire voyager rien qu’avec une glace.</p>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="{{ asset ('img/SOURCE/rounded2.png') }}" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Janvier 2016</h4>
+                                    <h4 class="subheading">La première boutique ...</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Après plusieurs années de maturation, l’idée lui vint enfin et la première boutique de glace ouvrit. Des saveurs luxueuses piochées aux 4 coins du monde, vous promettant un dépaysement sans pareil. </p>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="{{ asset ('img/SOURCE/rounded3.png') }}" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>December 2018</h4>
+                                    <h4 class="subheading">Aujourd’hui...</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Plus de 10 boutiques à travers le monde et plus d’une quinzaine de saveurs tirées des ingrédients les plus onéreux au monde. Une qualité unique pour un cadeau rempli de douceur, laissant libre arbitre à votre imagination ... </p>
+                                </div>
+                            </div>
+                        </li>
+
+
+
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <a class="rejoignez" href="{{ path ('ateliers') }}">
+                                    <h4>Rejoignez
+                                        <br>l'aventure dans
+                                        <br> nos Ateliers
+                                    </h4>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact -->
+
+    <!--
+
+      <section id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading text-uppercase">Nous contacter
+              </h2>
+              <h3 class="section-subheading text-muted">la meilleur facon de resister a la tentation est d'y ceder </h3>
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="col-lg-12">
+              <form id="contactForm" name="sentMessage" novalidate="novalidate" method="POST" action="">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input class="form-control" id="name" type="text" placeholder="Votre Nom *" required="required" data-validation-required-message="Veuillez rentrer un nom.">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" id="email" type="email" placeholder="Votre Email *" required="required" data-validation-required-message="Veuillez rentrer email valide.">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" id="phone" type="tel" placeholder="Votre Téléphone *" required="required" data-validation-required-message="Veuillez renseigner votre numéro.">
+                      <p class="help-block text-danger"></p>
+                    </div>
+
+
+                  </div>
+
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <textarea class="form-control" id="message" placeholder="Votre Message *" required="required" data-validation-required-message="Veuillez rentrer un message."></textarea>
+                      <p class="help-block text-danger"></p>
+                    </div>
+
+
+
+                  </div>
+                  <div class="clearfix"></div>
+
+
+                  <div class="col-lg-12 text-center">
+                    <div id="success"></div>
+                    <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Envoyez </button>
+                  </div>
+                </div>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    -->
+
+
+
+
+
+{% endblock %}
