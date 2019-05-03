@@ -1,0 +1,90 @@
+{% extends "base.html.twig" %}
+
+
+    {% block stylesheets %}
+
+
+        <!----------------------------- LES SCRIPTS --------------------------------------------->
+
+        <link href="{{ asset('dashboard/css/font-face.css') }}" rel="stylesheet" media="all">
+
+        <link href="{{ asset('dashboard/css/font-awesome.min.css') }}" rel="stylesheet" media="all">
+        <link href="{{ asset('dashboard/css/fontawesome-all.min.css') }}" rel="stylesheet" media="all">
+        <link href="{{ asset('dashboard/css/material-design-iconic-font.min.css') }}" rel="stylesheet" media="all">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+              integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link href="{{ asset('dashboard/css/font-awesome.css') }}" rel="stylesheet" media="all">
+
+
+
+        <link href="{{ asset('dashboard/css/material-design-iconic-font.css') }}" rel="stylesheet" media="all">
+
+        <!-- Bootstrap CSS-->
+        <link href="{{ asset('dashboard/css/bootstrap.min.css') }}" rel="stylesheet" media="all">
+
+
+        <!-- Vendor CSS-->
+        <link href="{{ asset('dashboard/css/animsition.min.css') }}" rel="stylesheet" media="all">
+        <link href="{{ asset('dashboard/css/bootstrap-progressbar-3.3.4.min.css') }}" rel="stylesheet" media="all">
+        <link href="{{ asset('dashboard/css/animate.css') }}" rel="stylesheet" media="all">
+        <link href="{{ asset('dashboard/css/hamburgers.min.css') }}" rel="stylesheet" media="all">
+        <link href="{{ asset('dashboard/css/slick.css') }}" rel="stylesheet" media="all">
+        <link href="{{ asset('dashboard/css/select2.min.css') }}" rel="stylesheet" media="all">
+        <link href="{{ asset('dashboard/css/perfect-scrollbar.css') }}" rel="stylesheet" media="all">
+
+        <!-- Main CSS-->
+        <link href="{{ asset('dashboard/css/theme.css') }}" rel="stylesheet" media="all">
+
+
+
+    {% endblock %}
+
+
+    {% block body %}
+
+        <!--preload-->
+        <div class="loader" id="page-loader">
+            <div class="loading-wrapper">
+
+            </div>
+        </div>
+
+        {% block content '' %}
+
+
+    {% endblock %}
+
+
+
+    {% block javascripts %}
+
+
+        <!--script file-->
+
+
+        <!-- Jquery JS-->
+        <script src="{{ asset('dashboard/js/jquery-3.2.1.min.js') }}"></script>
+        <!-- Bootstrap JS-->
+        <script src="{{ asset('dashboard/js/popper.min.js') }}"></script>
+        <script src="{{ asset('dashboard/js/bootstrap.min.js') }}"></script>
+
+
+        <!-- Vendor JS       -->
+        <script src="{{ asset('dashboard/js/slick.min.js') }}"></script>
+        <script src="{{ asset('dashboard/js/wow.min.js') }}"></script>
+        <script src="{{ asset('dashboard/css/animsition.min.js') }}"></script>
+        <script src="{{ asset('dashboard/js/bootstrap-progressbar.min.js') }}"></script>
+        <script src="{{ asset('dashboard/js/jquery.waypoints.min.js') }}"></script>
+        <script src="{{ asset('dashboard/js/jquery.counterup.min.js') }}"></script>
+        <script src="{{ asset('dashboard/js/circle-progress.min.js') }}"></script>
+        <script src="{{ asset('dashboard/js/perfect-scrollbar.js') }}"></script>
+        <script src="{{ asset('dashboard/js/Chart.bundle.min.js') }}"></script>
+        <script src="{{ asset('dashboard/js/select2.min.js') }}"></script>
+
+        <!-- Main JS-->
+        <script src="{{ asset('dashboard/js/main.js') }}"></script>
+
+
+
+
+    {% endblock %}
