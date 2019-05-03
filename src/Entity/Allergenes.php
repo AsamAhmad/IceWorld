@@ -18,35 +18,16 @@ class Allergenes
      */
     private $id;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $gluten;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $oeuf;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $fruit_a_coque;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $lait;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $soja;
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Glace", mappedBy="Allergenes")
      */
     private $glaces;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $name;
 
     public function __construct()
     {
@@ -58,65 +39,6 @@ class Allergenes
         return $this->id;
     }
 
-    public function getGluten(): ?int
-    {
-        return $this->gluten;
-    }
-
-    public function setGluten(int $gluten): self
-    {
-        $this->gluten = $gluten;
-
-        return $this;
-    }
-
-    public function getOeuf(): ?int
-    {
-        return $this->oeuf;
-    }
-
-    public function setOeuf(int $oeuf): self
-    {
-        $this->oeuf = $oeuf;
-
-        return $this;
-    }
-
-    public function getFruitACoque(): ?int
-    {
-        return $this->fruit_a_coque;
-    }
-
-    public function setFruitACoque(int $fruit_a_coque): self
-    {
-        $this->fruit_a_coque = $fruit_a_coque;
-
-        return $this;
-    }
-
-    public function getLait(): ?int
-    {
-        return $this->lait;
-    }
-
-    public function setLait(int $lait): self
-    {
-        $this->lait = $lait;
-
-        return $this;
-    }
-
-    public function getSoja(): ?int
-    {
-        return $this->soja;
-    }
-
-    public function setSoja(int $soja): self
-    {
-        $this->soja = $soja;
-
-        return $this;
-    }
 
     /**
      * @return Collection|Glace[]
@@ -142,6 +64,18 @@ class Allergenes
             $this->glaces->removeElement($glace);
             $glace->removeAllergene($this);
         }
+
+        return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
 
         return $this;
     }

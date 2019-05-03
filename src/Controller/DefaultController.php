@@ -7,8 +7,8 @@
  */
 
 namespace App\Controller;
-
-
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use App\Entity\Glace;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -28,23 +28,34 @@ class DefaultController extends AbstractController
     }
 
 
-
-
-
-
     /**
      * @Route("parfums", name="parfums_home",methods={"GET"})
      */
     public function parfums()
     {
+        $glaces = $this->getDoctrine()
+            ->getRepository(Glace::class)
+            ->findAll();
 
-        return $this->render("default/parfums.html.twig");
+        return $this->render("default/parfums.html.twig", [
+            "glaces" => $glaces
+        ]);
     }
 
 
+    /*
+        public function modal($id)
+    {
+        $modal = $this->getDoctrine()
+            ->getRepository(Glace::class)
+            ->findByLasted($id);
 
+        return $this->render("default/parfums.html.twig",[
+            "modal" => $modal
+        ]);
 
-
+    }
+    */
 
 
     /**
