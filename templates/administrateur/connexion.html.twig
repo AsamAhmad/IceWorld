@@ -6,10 +6,7 @@
 
     {% endblock %}
 
-
-
 {% block content %}
-
 
     <div class="limiter">
         <div class="container-login100">
@@ -27,7 +24,7 @@
 					</span>
 
                     <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Veuillez renseigner un identifiant">
-                        <input class="input100" type="text" name="username">
+                        <input class="input100" type="text" name="nom">
                         <span class="focus-input100" data-placeholder="Identifiant"></span>
                     </div>
 
@@ -38,7 +35,7 @@
 
                      <div class="container-login100-form-btn">
 
-                             <button type="submit" class="login100-form-btn">
+                             <button name="submit" type="submit" class="login100-form-btn" value="register">
                                  Accéder à votre console
                             </button>
 
