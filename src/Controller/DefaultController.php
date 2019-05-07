@@ -144,34 +144,6 @@ class DefaultController extends AbstractController
 
     }
 
-    /**
-     * @Route("dashboard", name="dash")
-     *
-     */
-
-    public function dashboard ()
-    {
-        return $this->render("dashboardd/panneaux.html.twig");
-    }
-
-
-    public function AddInNewsletter ($newsletter)
-    {
-        # Création d'une personne rentrant son email (Membre du site)
-
-        $membre = new Newsletter();
-        $membre->setEmail("hugo@technews.com");
-
-        # Le rentrer dans la base de donnée
-
-        $em = $this->getDoctrine()->getManager(); // Permet de récupérer le EntityManager de Doctrine
-        $em->persist($newsletter); // J'enregistre dans ma base la catégorie
-        $em->flush(); // J'execute le tout.
-
-        # Retourner une réponse à la vue
-        return $this->render("default/ateliers.html.twig");
-    }
-
 
 
 
