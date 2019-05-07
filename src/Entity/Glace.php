@@ -29,7 +29,7 @@ class Glace
     private $description;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string")
      */
     private $allergenes;
 
@@ -43,10 +43,8 @@ class Glace
      */
     private $image;
 
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Allergenes", inversedBy="glaces")
-     */
-    private $Allergenes;
+
+
 
     /**
      * @ORM\Column(type="string", length=64)
@@ -87,12 +85,12 @@ class Glace
         return $this;
     }
 
-    public function getAllergenes(): ?int
+    public function getAllergenes(): ?string
     {
         return $this->allergenes;
     }
 
-    public function setAllergenes(int $allergenes): self
+    public function setAllergenes(string $allergenes): self
     {
         $this->allergenes = $allergenes;
 
@@ -140,6 +138,7 @@ class Glace
 
         return $this;
     }
+
 
 
 }

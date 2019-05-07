@@ -3,14 +3,13 @@
 
 {% block title %}
 
-    IceWorld | Parfum
+    IceWorld | Parfums
 
 {% endblock %}
 
 
 
 {% block content %}
-
 
     <!-- Portfolio Grid -->
     <section class="bg-light" id="portfolio">
@@ -27,25 +26,25 @@
 
             <div class="row">
 
-
                 {% for glace in glaces  %}
 
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
 
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-2x"></i>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fas fa-plus fa-2x"></i>
+                                </div>
                             </div>
-                        </div>
 
-                        <img class="img-fluid" src="{{ asset ('img/portfolio/' ~ glace.image ) }}" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>{{ glace.reference }}</h4>
-                        <p class="text-muted">Mangez-moi</p>
+                            <img class="img-fluid" src="{{ asset ('img/portfolio/' ~ glace.image ) }}" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>{{ glace.reference }}</h4>
+                            <p class="text-muted">Mangez-moi</p>
+                        </div>
                     </div>
-                </div>
                 {% endfor %}
             </div>
         </div>
@@ -66,7 +65,7 @@
 
     <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         {% for glace in glaces %}
-        <div class="modal-dialog">
+            <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
                     <div class="lr">
@@ -106,16 +105,276 @@
                         </div>
                     </div>
                 </div>
+                </div>{% endfor %}
             </div>
-        </div>{% endfor %}
     </div>
+
+    <!-- Portfolio Grid
+    <section class="bg-light" id="portfolio">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="section-heading text-uppercase">NOS PARFUMS</h1>
+                    <h3 class="section-subheading text-muted">La meilleure façon de resister à la tentation c'est d'y céder </h3>
+                </div>
+            </div>
+
+            -->
+    <!--
+            <div class="row">
+
+
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fas fa-plus fa-2x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="{{ asset ('img/portfolio/preparation-mix-glace-yoggy-par-6x1-l-2-1521740425.jpg') }}" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>L'Hivernal</h4>
+                        <p class="text-muted">Une vague de froid</p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fas fa-plus fa-2x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="{{ asset ('img/portfolio/preparation-mix-glace-yoggy-par-6x1-l-2-1521740425.jpg') }}" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>L'Hiver</h4>
+                        <p class="text-muted">Une vague de froid</p>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fas fa-plus fa-2x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="{{ asset ('img/portfolio/001.png') }}" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>La Chocolatine</h4>
+                        <p class="text-muted">Mangez-moi</p>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fas fa-plus fa-2x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="{{ asset ('img/portfolio/001.png') }}" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>La Chocolatane</h4>
+                        <p class="text-muted">Mangez-moi</p>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fas fa-plus fa-2x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="{{ asset ('img/portfolio/001.png') }}" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>La Chocolast</h4>
+                        <p class="text-muted">Mangez-moi</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+-->
+
+
+
+    <!----------------------------- ATTENTION AUX MODALS DE PORTFOLIO DOIVENT ÊTRE PLACES SOUS l'EXTEND du FOOTER (fonctionne sans ) --------------------------------------------->
+
+
+    <!-- Pour que le modal correspond à l'image du Portfolio il faut que le
+    id="portfolioModal2" du modal correspond au Href de l'image du portfolio href="#portfolioModal3"> ----->
+
+
+    <!-- Modal 2
+
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+-->
+
+                                <!-- Project Details Go Here
+                                <h2 class="text-uppercase">L'Hivernal</h2>
+                                <p class="item-intro text-muted">Une vague de froid</p>
+
+                                <img class="img-fluid d-block mx-auto" src="img/portfolio/cold-delicious-edible-1739347-transparent.png" alt="">
+
+                                <ul class="list-inline">
+
+                                    <li>
+                                        <p class="lead"> <strong> Ingrédiants : </strong> Consommée dans plusieurs pays d’Amérique du Sud, c’est surtout en Argentine, que la « Dulce de Leche » s’érige en véritable symbole national. Selon la légende, elle serait née par
+                                            hasard, au XIXe siècle, d'un simple oubli de lait sucré sur le feu. Après plusieurs heures de cuisson, le lait se transforme en une sorte de caramel onctueux et… délicieux. </p>
+                                    </li>
+
+                                    <li>
+                                        <p class="lead"> <strong> Goût : </strong> Du lait, du sucre et beaucoup de patience sont les ingrédients principaux d'un parfum au tonalités enfantines. ! </p>
+                                    </li>
+
+                                </ul>
+
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <i class="fas fa-times"></i> </button>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+
+
+    <!-- Modal 2
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+
+
+                            -->
+
+
+                                <!-- Project Details Go Here
+                                <h2 class="text-uppercase">L'hiver</h2>
+                                <p class="item-intro text-muted">Une vague de froid</p>
+
+
+                                <img class="img-fluid d-block mx-auto" src="img/portfolio/preparation-mix-glace-yoggy-par-6x1-l-2-1521740425.jpg" alt="">
+
+                                <ul class="list-inline">
+
+                                    <li>
+                                        <p class="lead"> <strong> Ingrédiants : </strong> Consommée dans plusieurs pays d’Amérique du Sud, c’est surtout en Argentine, que la « Dulce de Leche » s’érige en véritable symbole national. Selon la légende, elle serait née par
+                                            hasard, au XIXe siècle, d'un simple oubli de lait sucré sur le feu. Après plusieurs heures de cuisson, le lait se transforme en une sorte de caramel onctueux et… délicieux. </p>
+                                    </li>
+
+                                    <li>
+                                        <p class="lead"> <strong> Goût : </strong> Du lait, du sucre et beaucoup de patience sont les ingrédients principaux d'un parfum au tonalités enfantines. ! </p>
+                                    </li>
+
+                                </ul>
+
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <i class="fas fa-times"></i> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ -->
+
+
+    <!-- Modal 4
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+
+                            -->
+
+
+                                <!-- Project Details Go Here
+                                <h2 class="text-uppercase">La Chocolatine</h2>
+                                <p class="item-intro text-muted">Mangez-moi</p>
+                                <img class="img-fluid d-block mx-auto" src="img/portfolio/Glace-projet-max.png" alt="">
+
+                                <ul class="list-inline">
+
+                                    <li>
+                                        <p class="lead"> <strong> Ingrédiants : </strong> Consommée dans plusieurs pays d’Amérique du Sud, c’est surtout en Argentine, que la « Dulce de Leche » s’érige en véritable symbole national. Selon la légende, elle serait née par
+                                            hasard, au XIXe siècle, d'un simple oubli de lait sucré sur le feu. Après plusieurs heures de cuisson, le lait se transforme en une sorte de caramel onctueux et… délicieux. </p>
+                                    </li>
+
+                                    <li>
+                                        <p class="lead"> <strong> Goût : </strong> Du lait, du sucre et beaucoup de patience sont les ingrédients principaux d'un parfum au tonalités enfantines. ! </p>
+                                    </li>
+
+                                </ul>
+
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <i class="fas fa-times"></i> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ -->
+
+
 
 
 {% endblock %}
-
-
-
-
 
 
 
