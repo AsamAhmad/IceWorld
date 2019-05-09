@@ -63,7 +63,6 @@
         </div>
 
 
-
         <div class="row">
 
             <table class="table table-hover table-stripped">
@@ -71,15 +70,12 @@
                 <thead class="thead-dark">
 
 
-
-
                 <tr>
                     <th class="text-left">Les Glaces</th>
 
-                    {% for glace in glaces %}
+                    {% for allergene in allergenes %}
 
-
-                    <th class="text-center">{{ glace.allergenes}}</th>
+                        <th class="text-center">{{ allergene.name }}</th>
 
                     {% endfor %}
                 </tr>
@@ -89,21 +85,27 @@
 
 
                 <tbody class="table-stripped2">
+
                 {% for glace in glaces %}
 
-                <tr>
+                    {#{{ dump(glace.allergenes[0].name) }}#}
 
-                    <th>{{ glace.reference }}</th>
+                    <tr>
+                        <th>{{ glace.reference }}</th>
 
-                    {% for allergene in allergenes %}
+                        {#{% dump getAllergene(glace.allergenes, 'gluten') %}#}
+                        {#{% for allergene in ['gluten', 'oeuf', 'fruit à coque', 'lait', 'soja'] %}#}
 
-                    <td class="text-center">{{ allergene.name }} </td>
+                        {% for allergene in allergenes %}
+                            <td class="text-center">
+                                {% if isAllergenInIceCrean(glace.allergenes, allergene.name) %}
+                                    X
+                                {% endif %}
+                            </td>
+                        {% endfor %}
 
-                    {% endfor %}
-
-                </tr>
+                    </tr>
                 {% endfor %}
-
 
                 </tbody>
 

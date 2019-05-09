@@ -29,11 +29,6 @@ class Glace
     private $description;
 
     /**
-     * @ORM\Column(type="string")
-     */
-    private $allergenes;
-
-    /**
      * @ORM\Column(type="integer")
      */
     private $prix;
@@ -43,17 +38,14 @@ class Glace
      */
     private $image;
 
-
-
-
     /**
-     * @ORM\Column(type="string", length=64)
+     * @ORM\ManyToMany(targetEntity="App\Entity\Allergenes")
      */
-
+    private $allergenes;
 
     public function __construct()
     {
-        $this->Allergenes = new ArrayCollection();
+        $this->allergenes = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -85,18 +77,6 @@ class Glace
         return $this;
     }
 
-    public function getAllergenes(): ?string
-    {
-        return $this->allergenes;
-    }
-
-    public function setAllergenes(string $allergenes): self
-    {
-        $this->allergenes = $allergenes;
-
-        return $this;
-    }
-
     public function getPrix(): ?int
     {
         return $this->prix;
@@ -121,10 +101,18 @@ class Glace
         return $this;
     }
 
+    /**
+     * @return Collection|Allergenes[]
+     */
+    public function getAllergenes(): Collection
+    {
+        return $this->allergenes;
+    }
+
     public function addAllergene(Allergenes $allergene): self
     {
-        if (!$this->Allergenes->contains($allergene)) {
-            $this->Allergenes[] = $allergene;
+        if (!$this->allergenes->contains($allergene)) {
+            $this->allergenes[] = $allergene;
         }
 
         return $this;
@@ -132,13 +120,11 @@ class Glace
 
     public function removeAllergene(Allergenes $allergene): self
     {
-        if ($this->Allergenes->contains($allergene)) {
-            $this->Allergenes->removeElement($allergene);
+        if ($this->allergenes->contains($allergene)) {
+            $this->allergenes->removeElement($allergene);
         }
 
         return $this;
     }
-
-
 
 }

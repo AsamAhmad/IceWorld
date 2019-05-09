@@ -19,7 +19,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class DefaultController extends AbstractController
 {
 
-
     /**
      * @Route("/", name="accueil")
      * page d'Accueil
@@ -38,8 +37,10 @@ class DefaultController extends AbstractController
             ->getRepository(Glace::class)
             ->findAll();
 
+
         return $this->render("default/parfums.html.twig", [
-            "glaces" => $glaces
+            "glaces" => $glaces,
+
         ]);
     }
 
@@ -66,9 +67,13 @@ class DefaultController extends AbstractController
             ->getRepository(Glace::class)
             ->findAll();
 
+
         return $this->render("default/allergenes.html.twig", [
             "glaces" => $glaces,
             "allergenes" => $allergenes
+
+
+
         ]);
     }
 
