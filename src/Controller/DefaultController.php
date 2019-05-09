@@ -37,8 +37,10 @@ class DefaultController extends AbstractController
             ->getRepository(Glace::class)
             ->findAll();
 
+
         return $this->render("default/parfums.html.twig", [
-            "glaces" => $glaces
+            "glaces" => $glaces,
+
         ]);
 
     }
@@ -66,9 +68,13 @@ class DefaultController extends AbstractController
             ->findAll() ;
 
 
+
         return $this->render("default/allergenes.html.twig", [
             "glaces" => $glaces,
             "allergenes" => $allergenes
+
+
+
         ]);
     }
 
