@@ -3,11 +3,19 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\AdministrateurRepository")
+ * @UniqueEntity(
+ *     fields={"email"},
+ *     message="L'email que vous avez indiqué est déjà utilisé"
+ * )
  */
-class Administrateur
+class Administrateur implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -23,11 +31,19 @@ class Administrateur
 
     /**
      * @ORM\Column(type="string", length=64)
+     * @Assert\NotBlank(message="Veuillez saisir un mot de passe")
+     * @Assert\Length(
+     *     max="255",
+     *     maxMessage="Limité à {{ limit }} caractères.",
+     *     min="8",
+     *     minMessage="Votre mot de passe doit contenir au moins 8 caractères"
+     * )
      */
     private $password;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Email()
      */
     private $email;
 
@@ -75,4 +91,23 @@ class Administrateur
     public function setRoles(array $array)
     {
     }
+
+    public function eraseCredentials()
+    {
+    }
+
+    public function getSalt()
+    {
+    }
+
+    public function getUsername()
+    {
+    }
+
+    public function getRoles()
+    {
+        return ['ROLE_USER'];
+    }
+
+
 }

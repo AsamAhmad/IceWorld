@@ -1,17 +1,19 @@
-
-
-    <!-- Footer -->
+<!-- Footer -->
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
           <span class="copyright">Copyright &copy; IceWorld 2019 <br>
+              {% if not app.user %}
+                  <a class="login" href="{{ path ('security_login') }}">Connexion</a>
+              {% else %}
+                  <a class="logout" href="{{ path ('security_logout') }}">Déconnexion</a>
+              {% endif %}
 
-            <a class="connexion" href="{{ path ('admin') }}">Connexion</a>
+            <a hidden="true" class="inscription" href="{{ path ('security_registration') }}">Inscription</a><br>
+
 
           </span>
-
-
 
 
                 </div>
@@ -44,10 +46,9 @@
 
 
                 <div class="col-md-4">
-
                     <ul class="list-inline quicklinks">
 
-                        <form class="form-inline" method="post" action="">
+                        <form class="form-inline" method="post" action="$newsletter">
                             <p class="newsletter"> Abonnez-vous à la Newsletter</p>
                             <div class="form-group mb-2">
 

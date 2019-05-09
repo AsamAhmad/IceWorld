@@ -13,10 +13,10 @@
             <div class="wrap-login100 p-t-85 p-b-20">
 
 
-                <form class="login100-form validate-form" method="post" action="">
+                <form class="login100-form validate-form" method="post" action="{{ path('security_login') }}">
 
 					<span class="login100-form-title p-b-70">
-						Bienvenue
+						Connexion à votre espace administration
 					</span>
 
                     <span class="login100-form-avatar">
@@ -24,22 +24,19 @@
 					</span>
 
                     <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Veuillez renseigner un identifiant">
-                        <input class="input100" type="text" name="nom">
+                        <input class="input100" type="text" name="_username">
                         <span class="focus-input100" data-placeholder="Identifiant"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-50" data-validate="Veuillez renseigner un mot de passe">
-                        <input class="input100" type="password" name="password">
+                        <input class="input100" type="password" name="_password">
                         <span class="focus-input100" data-placeholder="Mot de passe"></span>
                     </div>
 
                      <div class="container-login100-form-btn">
-
                              <button name="submit" type="submit" class="login100-form-btn" value="register">
-                                 Accéder à votre console
+                                 Espace Administration
                             </button>
-
-
                     </div>
 
 

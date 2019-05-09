@@ -19,7 +19,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class DefaultController extends AbstractController
 {
 
-
     /**
      * @Route("/", name="accueil")
      * page d'Accueil
@@ -41,6 +40,7 @@ class DefaultController extends AbstractController
         return $this->render("default/parfums.html.twig", [
             "glaces" => $glaces
         ]);
+
     }
 
     /**
@@ -57,14 +57,14 @@ class DefaultController extends AbstractController
      */
     public function allergenes()
     {
-
-        $allergenes = $this->getDoctrine()
-            ->getRepository(Allergenes::class)
-            ->findAll();
-
         $glaces = $this->getDoctrine()
             ->getRepository(Glace::class)
             ->findAll();
+
+        $allergenes = $this->getDoctrine()
+            ->getRepository(Allergenes::class)
+            ->findAll() ;
+
 
         return $this->render("default/allergenes.html.twig", [
             "glaces" => $glaces,
@@ -83,55 +83,15 @@ class DefaultController extends AbstractController
     }
 
     /**
-     * @Route("dashboard", name="dash")
-     *
+     * Génération d'un nouvel abonné
      */
-
-    public function dashboard ()
-    {
-        $glaces = $this->getDoctrine()
-            ->getRepository(Glace::class)
-            ->findAll();
-
-        return $this->render("dashboardd/panneaux.html.twig", [
-            "glaces" => $glaces
-        ]);
-
-    }
-
-
-
-    /**
-     * @Route("connexion", name="admin")
-     *
-     */
-
-    public function connexion ()
-    {
-        # Création d'un administrateur
-
-        $connexion = new Administrateur();
-        $connexion->setNom("France");
-        $connexion->setPassword("");
-        $connexion->setEmail("hugo@technews.com");
-
-        # Le rentrer dans la base de donnée
-        $em = $this->getDoctrine()->getManager(); // Permet de récupérer le EntityManager de Doctrine
-        $em->persist($connexion); // J'enregistre dans ma base le
-        $em->flush(); // J'execute le tout.
-
-        # Retourner une réponse à la vue
-        return $this->render("administrateur/connexion.html.twig");
-    }
-
-
-
     public function AddInNewsletter ()
     {
         # Création d'une personne rentrant son email (Membre du site)
 
         $newsletter = new Newsletter();
-        $newsletter->setEmail("hugo@news.com");
+        $repository = $this->getDoctrine()
+            ->getRepository(Newsletter::class);
 
         # Le rentrer dans la base de donnée
 

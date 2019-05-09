@@ -1,14 +1,13 @@
 security:
     encoders:
-        App\Entity\Admin:
-            algorithm: argon2i
+        App\Entity\Administrateur:
+            algorithm: bcrypt
 
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
-        # used to reload user from session & other features (e.g. switch_user)
-        app_user_provider:
+        in_database:
             entity:
-                class: App\Entity\Admin
+                class: App\Entity\Administrateur
                 property: email
     firewalls:
         dev:
@@ -16,6 +15,16 @@ security:
             security: false
         main:
             anonymous: true
+
+            provider: in_database
+
+            form_login:
+                login_path: security_login
+                check_path: security_login
+
+            logout:
+                path: security_logout
+                target: accueil
 
             # activate different ways to authenticate
 

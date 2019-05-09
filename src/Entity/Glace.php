@@ -85,7 +85,7 @@ class Glace
         return $this;
     }
 
-    public function getAllergenes(): ?string
+    public function getAllergenes()
     {
         return $this->allergenes;
     }

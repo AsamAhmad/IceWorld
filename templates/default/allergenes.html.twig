@@ -76,10 +76,9 @@
                 <tr>
                     <th class="text-left">Les Glaces</th>
 
-                    {% for glace in glaces %}
+                    {% for allergene in allergenes %}
 
-
-                    <th class="text-center">{{ glace.allergenes}}</th>
+                        <th class="text-center">{{ allergene.name}}</th>
 
                     {% endfor %}
                 </tr>
@@ -89,22 +88,19 @@
 
 
                 <tbody class="table-stripped2">
+
+
                 {% for glace in glaces %}
-
                 <tr>
-
                     <th>{{ glace.reference }}</th>
 
-                    {% for allergene in allergenes %}
-
-                    <td class="text-center">{{ allergene.name }} </td>
-
-                    {% endfor %}
-
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
                 </tr>
                 {% endfor %}
-
-
                 </tbody>
 
             </table>

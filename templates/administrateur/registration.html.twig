@@ -1,0 +1,73 @@
+{% extends "layout-admin.html.twig" %}
+
+    {% block title %}
+
+        IceWorld | Inscription
+
+    {% endblock %}
+
+{% block content %}
+
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100 p-t-85 p-b-20">
+
+
+            <form class="login100-form validate-form" method="post" action="">
+
+					<span class="login100-form-title p-b-70">
+						Inscrivez-vous !
+					</span>
+
+                {% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+
+
+                {{ form_row(form.nom, {'label' : 'Nom d\'utilisateur' , 'attr' :{ 'placehorder' : 'Rentrer votre nom d\'utilisateur' }}) }}
+
+                {{ form_row(form.email, {'label' : 'Adresse Mail' , 'attr' :{ 'placehorder' : 'Rentrer votre email' }})  }}
+
+                {{ form_row(form.password, {'label' : "Mot de passe" , 'attr' :{ 'placehorder' : "Rentrer un mot de passe" }}) }}
+
+                <button type="submit" class="btn btn-warning"> Inscription</button>
+
+                {{ form_end(form) }}
+
+
+
+                <ul class="login-more p-t-190">
+                    <li class="m-b-8">
+
+
+                        <a href="#" class="txt2">
+                            Identifiant / Mot de passe ?
+                        </a>
+
+                        <span class="txt1">
+								Oublié
+							</span>
+                    </li>
+
+                    <li>
+							<span class="txt1">
+								Nouveau administrateur ?
+							</span>
+
+                        <a href="#" class="txt2">
+                            Enregistrez-vous
+                        </a>
+                    </li>
+                </ul>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+
+<div id="dropDownSelect1"></div>
+{% endblock %}
+
