@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="copyright">
+
+            {% if not app.user %}
+                <a class="login" href="{{ path ('security_login') }}">Connexion</a>
+            {% else %}
+                <a class="logout" href="{{ path ('security_logout') }}">Déconnexion</a>
+            {% endif %}
+            <p class="lead"> <a class="login" href="{{ path ('accueil') }}">Retour au site vitrine</a> </p>
+        </div>
+    </div>
+</div>

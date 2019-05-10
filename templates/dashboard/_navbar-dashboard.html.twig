@@ -1,0 +1,40 @@
+
+<div class="page-wrapper">
+
+
+    <!-- MENU SIDEBAR-->
+    <aside class="menu-sidebar d-none d-lg-block">
+        <div class="logo">
+            <a href="{{ path ('dashindex') }}">
+                <img src="{{ asset ('img/sans-titre-1.png') }}" alt="">
+            </a>
+        </div>
+        <div class="menu-sidebar__content js-scrollbar3">
+            <nav class="navbar-sidebar">
+                <ul class="list-unstyled navbar__list">
+
+                    <li>
+                        <a href="{{ path ('dashindex') }}">
+                            <i class="fas fa-home"></i>Accueil</a>
+                    </li>
+                    <li>
+                        <a class="js-arrow" href="{{ path ('gestion_des_produits') }}">
+                            <i class="fas fa-sun-o"></i>Gestion des Produits</a>
+                    </li>
+
+                    <li>
+                        <a href="{{ path ('gestion_de_la_newsletter') }}">
+                            <i class="fas fa-users"></i>Gestion de la Newsletter</a>
+                    </li>
+
+                    <li>
+                        <a href="{{ path ('dashallergenes') }}">
+                            <i class="fas fa-table"></i>Tableau des Allergènes</a>
+                    </li>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <!-- END MENU SIDEBAR-->
+</div>

@@ -1,0 +1,66 @@
+{% extends "layout_dashboard.html.twig" %}
+
+{% block title %}
+
+    Dashboard | Allergènes
+
+{% endblock %}
+
+{% block content %}
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container">
+                        <div class="row m-t-30">
+                            <div class="col-md-12">
+
+                                <!-- DATA TABLE-->
+                                <h2 class="title text-center">Allergènes<br><br></h2>
+                                <div class="mx-auto col-md-12">
+                                    <table class=" mx-auto table-data3 table-borderless">
+                                        <thead>
+                                        <tr>
+                                            <th class="text-left">Les Glaces</th>
+                                            {% for allergene in allergenes %}
+                                                <th class="text-center">{{ allergene.name }}</th>
+                                            {% endfor %}
+                                        </tr>
+                                        </thead>
+
+                                            <tbody class="thead-dark">
+
+                                            {% for glace in glaces %}
+
+                                                {#{{ dump(glace.allergenes[0].name) }}#}
+
+                                                <tr>
+                                                    <th>{{ glace.reference }}</th>
+
+                                                    {#{% dump getAllergene(glace.allergenes, 'gluten') %}#}
+                                                    {#{% for allergene in ['gluten', 'oeuf', 'fruit à coque', 'lait', 'soja'] %}#}
+
+                                                    {% for allergene in allergenes %}
+                                                        <td class="text-center">
+                                                            {% if isAllergenInIceCrean(glace.allergenes, allergene.name) %}
+                                                                X
+                                                            {% endif %}
+                                                        </td>
+                                                    {% endfor %}
+
+                                                </tr>
+                                            {% endfor %}
+
+                                            </tbody>
+                                    </table>
+                                </div>
+                                <!-- END DATA TABLE-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

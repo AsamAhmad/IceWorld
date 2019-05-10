@@ -6,6 +6,9 @@
 
         <!----------------------------- LES SCRIPTS --------------------------------------------->
 
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="{{ asset ('img/icon-svg/favicon2.png') }}"/>
+
         <link href="{{ asset('dashboard/css/font-face.css') }}" rel="stylesheet" media="all">
 
         <link href="{{ asset('dashboard/css/font-awesome.min.css') }}" rel="stylesheet" media="all">
@@ -48,9 +51,13 @@
 
             </div>
         </div>
+        {% include 'dashboard/_header-dashboard.html.twig' %}
+
+        {% include 'dashboard/_navbar-dashboard.html.twig' %}
 
         {% block content '' %}
 
+        {% include 'dashboard/_footer-dashboard.html.twig' %}
 
     {% endblock %}
 
@@ -83,6 +90,8 @@
 
         <!-- Main JS-->
         <script src="{{ asset('dashboard/js/main.js') }}"></script>
+
+
 
 
     {% endblock %}

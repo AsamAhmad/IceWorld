@@ -2,6 +2,16 @@
 //--//-->   FONT ET AUTRES
 ======================================*/
 
+
+
+
+.titreiceworld
+{
+    font-size: 100px;
+    font-family: 'Kaushan Script', 'Arial Narrow', Arial, sans-serif;
+}
+
+
 h1,
 h2 {
     font-family: 'Kaushan Script', 'Arial Narrow', Arial, sans-serif;

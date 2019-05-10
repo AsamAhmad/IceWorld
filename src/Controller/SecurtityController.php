@@ -43,6 +43,15 @@ class SecurtityController extends AbstractController
     /** @Route("/connexion" , name="security_login")*/
 
     public function login(){
+/*
+        $form = $this->;
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+
+            return $this->redirectToRoute('dashindex');
+        }
+ */
         return $this->render('administrateur/connexion.html.twig');
     }
 

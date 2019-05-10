@@ -89,6 +89,7 @@ class DefaultController extends AbstractController
     }
 
     /**
+     * @Route("footer.", name="footernewsletter")
      * Génération d'un nouvel abonné
      */
     public function AddInNewsletter ()
@@ -111,8 +112,94 @@ class DefaultController extends AbstractController
     }
 
 
+    /**
+     * @Route("dashboard", name="dashindex")
+     *Page d'Accueil
+     */
+
+    public function dashboard ()
+    {
+        $glaces = $this->getDoctrine()
+            ->getRepository(Glace::class)
+            ->findAll();
+
+        $newletters = $this->getDoctrine()
+            ->getRepository(Newsletter::class)
+            ->findAll();
+
+        $allergenes = $this->getDoctrine()
+            ->getRepository(Allergenes::class)
+            ->findAll();
 
 
+        return $this->render("dashboard/indexdashboard.html.twig", [
+            "glaces" => $glaces,
+            "newsletters" => $newletters,
+            "allergenes" => $allergenes,
+        ]);
+
+    }
+
+
+
+    /**
+     * @Route("dashboard/allergenes", name="dashallergenes")
+     *
+     */
+
+    public function dashboardallergene ()
+    {
+        $glaces = $this->getDoctrine()
+            ->getRepository(Glace::class)
+            ->findAll();
+
+        $allergenes = $this->getDoctrine()
+            ->getRepository(Allergenes::class)
+            ->findAll();
+
+        return $this->render("dashboard/allergenes-dashboard.html.twig", [
+            "allergenes" => $allergenes,
+            "glaces" => $glaces,
+        ]);
+
+    }
+
+    /**
+     * @Route("dashboard/produits", name="gestion_des_produits")
+     * Gestion des Produits
+     */
+
+
+    public function dashboardproduits()
+
+    {
+        $glaces = $this->getDoctrine()
+            ->getRepository(Glace::class)
+            ->findAll();
+
+        return $this->render("dashboard/produits-dashboard.html.twig", [
+            "glaces" => $glaces
+        ]);
+    }
+
+    /**
+     * @Route("dashboard/newsletter", name="gestion_de_la_newsletter")
+     * Gestion de la Newsletter
+     */
+
+
+    public function newsletter()
+
+    {
+        $newletters = $this->getDoctrine()
+            ->getRepository(Newsletter::class)
+            ->findAll();
+
+        return $this->render("dashboard/newsletter-dashboard.html.twig", [
+            "newsletters" => $newletters
+        ]);
+
+    }
 
 
 }
